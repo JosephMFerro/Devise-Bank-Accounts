@@ -1,0 +1,20 @@
+<h1>Add Accounts</h1>
+<hr />
+
+<div class = "ui form">
+  <%= form_with(model: @account, local: true) do |f| %>
+
+    <div class = "field">
+      <%= f.label :name %>
+      <%= f.text_field :name, required: true, placeholer: "Name" %>
+    </div>
+
+    <div class = "field">
+      <%= f.label :balance %>
+      <%= f.number_field :balance, required: true, placeholer: "Balance", min: 0 %>
+    </div>
+
+    <%= f.submit nil, class: "ui button" %>
+
+  <% end %>
+</div>
